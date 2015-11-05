@@ -7,6 +7,7 @@ import java.util.List;
 import es.uji.ei1039.practica6.adapter.Murcielago;
 import es.uji.ei1039.practica6.adapter.Rana;
 import es.uji.ei1039.practica6.adapter.StringArt;
+import es.uji.ei1039.practica6.adapter.StringArt2AsciiArt;
 import es.uji.ei1039.practica6.decorator.AsciiArt;
 import es.uji.ei1039.practica6.decorator.AsciiArtDecorator;
 import es.uji.ei1039.practica6.decorator.Cuadrado;
@@ -22,16 +23,17 @@ public class Main {
 		List<AsciiArt> cosas = new ArrayList<AsciiArt>(); 
 		cosas.add( new Cuadrado( 3, 'o' ) ); 
 		cosas.add( new Triangulo( 5, 't' ) ); 
-		for (AsciiArt cosa : cosas) 
+		for ( AsciiArt cosa : cosas ) {
 			Dibuja( new Marco( new DuplicaHorizontal( cosa ), '·' ) );
-		
+		}
 		
 		//SEGUNDO MAIN
-		/*List<StringArt> animales = new ArrayList<StringArt>();
-		animales.add(new Rana());
-		animales.add(new Murcielago());
-		for (StringArt animal : animales)
-			animal.dibuja(new Marco(new StringArt2AsciiArt(animal), '#'));*/
+		List<StringArt> animales = new ArrayList<StringArt>();
+		animales.add( new Rana() );
+		animales.add( new Murcielago() );
+		for ( StringArt animal : animales ) {
+			Dibuja( new Marco( new DuplicaHorizontal( new StringArt2AsciiArt(animal) ), '#') );
+		}
 		
 	}
 	

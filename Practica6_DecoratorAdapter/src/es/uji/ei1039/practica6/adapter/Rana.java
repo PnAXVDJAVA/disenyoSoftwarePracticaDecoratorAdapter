@@ -22,9 +22,10 @@ public class Rana extends StringArt {
 		rana.add("  UUU  UUU  UUU UUU"); 
 		
 		String ranaString = "";
-		for (String s : rana)
+		for (String s : rana) {
 			ranaString += s + "\n";
-
+		}
+				
 		return ranaString;
 	}
 

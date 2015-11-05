@@ -4,10 +4,10 @@ public class Marco extends AsciiArtDecorator {
 	
 	public Marco( AsciiArt asciiArt, char caracter ) {
 		super( asciiArt );
-		this.crearMarcoPro( caracter );
+		this.creaMarco( caracter );
 	}
 	
-	private void crearMarcoPro( char caracter ) {
+	private void creaMarco( char caracter ) {
 		String[] lineaAntigua = getLineas();
 		String[] nuevoLinea = new String[ lineaAntigua.length + 2 ];
 		int nuevoAncho = getAncho() + 2;
