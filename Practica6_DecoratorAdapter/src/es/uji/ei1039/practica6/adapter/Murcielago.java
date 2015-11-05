@@ -1,13 +1,12 @@
-package es.uji.ei1039.practica6.objetos;
+package es.uji.ei1039.practica6.adapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import es.uji.ei1039.practica6.clases.StringArt;
-
 public class Murcielago extends StringArt {
+
 	@Override
-    public String dibujo() {
+	public String Dibujo() {
     	List<String> mur = new ArrayList<String>();
 		mur.add(" ) \\     / (");
 		mur.add(")_  \\_V_/  _(");
@@ -19,5 +18,6 @@ public class Murcielago extends StringArt {
 			murString += s + "\n";
 
 		return murString;
-    }
+	}
+	
 }

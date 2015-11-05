@@ -1,13 +1,12 @@
-package es.uji.ei1039.practica6.objetos;
+package es.uji.ei1039.practica6.adapter;
 
-import java.util.*;
-
-import es.uji.ei1039.practica6.clases.StringArt;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Rana extends StringArt {
-	
+
 	@Override
-	public String dibujo() {
+	public String Dibujo() {
 		List<String> rana = new ArrayList<String>();
 		rana.add("       __   __");
 		rana.add("      /  \\ /  \\");
@@ -28,4 +27,5 @@ public class Rana extends StringArt {
 
 		return ranaString;
 	}
+
 }

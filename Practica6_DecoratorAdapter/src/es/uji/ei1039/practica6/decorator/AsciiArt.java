@@ -15,5 +15,9 @@ public abstract class AsciiArt {
 	public String[] getLineas() {
 		return lineas;
 	}
+	
+	public void setLineas( String[] lineas ) {
+		this.lineas = lineas;
+	}
 
 }
