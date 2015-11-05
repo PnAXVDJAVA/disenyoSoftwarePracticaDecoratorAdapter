@@ -1,7 +1,6 @@
 package es.uji.ei1039.practica6.main;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import es.uji.ei1039.practica6.adapter.Murcielago;
@@ -9,7 +8,6 @@ import es.uji.ei1039.practica6.adapter.Rana;
 import es.uji.ei1039.practica6.adapter.StringArt;
 import es.uji.ei1039.practica6.adapter.StringArt2AsciiArt;
 import es.uji.ei1039.practica6.decorator.AsciiArt;
-import es.uji.ei1039.practica6.decorator.AsciiArtDecorator;
 import es.uji.ei1039.practica6.decorator.Cuadrado;
 import es.uji.ei1039.practica6.decorator.DuplicaHorizontal;
 import es.uji.ei1039.practica6.decorator.Marco;
@@ -32,7 +30,7 @@ public class Main {
 		animales.add( new Rana() );
 		animales.add( new Murcielago() );
 		for ( StringArt animal : animales ) {
-			Dibuja( new Marco( new DuplicaHorizontal( new StringArt2AsciiArt(animal) ), '#') );
+			Dibuja( new Marco( new DuplicaHorizontal( new StringArt2AsciiArt( animal ) ), '#' ) );
 		}
 		
 	}
