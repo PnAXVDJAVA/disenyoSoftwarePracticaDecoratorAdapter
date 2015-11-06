@@ -12,6 +12,7 @@ import es.uji.ei1039.practica6.decorator.Cuadrado;
 import es.uji.ei1039.practica6.decorator.DuplicaHorizontal;
 import es.uji.ei1039.practica6.decorator.Marco;
 import es.uji.ei1039.practica6.decorator.Triangulo;
+import es.uji.ei1039.practica6.decorator.ZoomIn;
 
 public class Main {
 	
@@ -32,6 +33,9 @@ public class Main {
 		for ( StringArt animal : animales ) {
 			Dibuja( new Marco( new DuplicaHorizontal( new StringArt2AsciiArt( animal ) ), '#' ) );
 		}
+		
+		Dibuja( new ZoomIn( new Marco( new StringArt2AsciiArt( new Rana() ), '#' ) ) );
+		Dibuja( new ZoomIn( new Marco( new StringArt2AsciiArt( new Murcielago() ), '#' ) ) );
 		
 	}
 	
